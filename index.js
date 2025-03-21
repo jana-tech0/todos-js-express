@@ -5,6 +5,8 @@ app.use(express.json())
 let todos = [];
 let id = 1;
 
+// inputs are taken from the postman api
+
 app.post("/todos/post",(req,res) => {
     const newTodo = {
         id : id++,
