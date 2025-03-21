@@ -13,6 +13,7 @@ app.get("/todos/all" ,(req,res) => {
     res.json(todos)
 })
 
+
 app.post("/todos/post",(req,res) => {
     const {title} = req.body;
     const newTodo = {
@@ -29,7 +30,7 @@ app.get("/todos/:id",(req,res) => {
       const { id } = parseInt(req.params.id)
       const todo = todos.find(todo => id === todo.id);
       if(!todo) {
-        return res.status(404).json({message: "Todo Not Found"})
+        return res.status(404).json({message: "Todo Not Found "})
       }
       res.json(todo);
       
